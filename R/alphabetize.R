@@ -4,7 +4,7 @@
 #'
 #' @export
 #'
-alphabetize <- function() {
+alpha_sort_addin <- function() {
 
   context <- rstudioapi::getActiveDocumentContext()
   my_sel <- unlist(context$selection)["text"]

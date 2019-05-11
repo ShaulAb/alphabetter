@@ -1,5 +1,5 @@
 
-Name: Alpabetize
+Name: Alphabetize
 Description: Sort selected lines alphabetically
-Binding: alphabetize
+Binding: alpha_sort_addin
 Interactive: false
