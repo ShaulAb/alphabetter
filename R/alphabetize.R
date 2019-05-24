@@ -7,8 +7,8 @@
 alpha_sort_addin <- function() {
 
   context <- rstudioapi::getActiveDocumentContext()
-  my_sel <- unlist(context$selection)["text"]
-  rstudioapi::insertText(alpha_sort(my_sel))
+  selected_text <- unlist(context$selection)["text"]
+  rstudioapi::insertText(alpha_sort(selected_text))
 }
 
 
