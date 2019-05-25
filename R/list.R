@@ -1,6 +1,6 @@
-#' Sort Selected Lines
+#' List Functions
 #'
-#' Call this addin for code sections like libraries, constants etc.
+#' @description Addin to list and sort function names alphabetically.
 #'
 #' @export
 #'
@@ -14,14 +14,21 @@ list_funs_addin <- function() {
 #' List functions in current script
 #'
 #' @description Any functions appearing in the input text
-#' are identified and their names. Names are then sorted
-#' alphabetically and outputted as a commented text in a
+#' are identified and their names. \cr
+#' Names are then sorted alphabetically and outputted as a commented text in a
 #' "function per line" fashion.
 #'
 #' @param text String
 #'
-#' @return commented list of functions
+#' @return commented list of function names
 #' @export
+#'
+#' @examples
+#' cat(
+#'   list_functions(
+#'     'hi <- function() { "hi world" }
+#'     hello <- function() { "hello world" }
+#'     howdy <- function() { "howdy workld" }'))
 #'
 list_functions <- function(text) {
 
@@ -45,6 +52,9 @@ list_functions <- function(text) {
   #   Alphabetically sorted function names, one function per line
   #   list numbers are added automatically
   list_numbers = 1:length(items)
-  paste0("# " , list_numbers, ". ", items, "()", collapse = "\n")
+  if (length(items))
+   return(paste0("# " , list_numbers, ". ", items, "()", collapse = "\n"))
 
+  # empty strings if no valid functions were found
+  ""
 }

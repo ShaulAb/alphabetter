@@ -13,7 +13,7 @@ alpha_sort(text)
 sorted text
 }
 \description{
-helper function for alphabetize addin.
+Helper function for alphabetize addin. \cr
 Given active text selection, the function parses the text and
 re-order them by the alphabet.
 }

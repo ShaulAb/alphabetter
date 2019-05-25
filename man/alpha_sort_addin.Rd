@@ -7,5 +7,5 @@
 alpha_sort_addin()
 }
 \description{
-Call this addin for code sections like libraries, constants etc.
+Addin that sorts selected lines alphabetically.
 }

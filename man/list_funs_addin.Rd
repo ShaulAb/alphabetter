@@ -2,10 +2,10 @@
 % Please edit documentation in R/list.R
 \name{list_funs_addin}
 \alias{list_funs_addin}
-\title{Sort Selected Lines}
+\title{List Functions}
 \usage{
 list_funs_addin()
 }
 \description{
-Call this addin for code sections like libraries, constants etc.
+Addin to list and sort function names alphabetically.
 }

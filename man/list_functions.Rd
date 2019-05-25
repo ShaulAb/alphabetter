@@ -10,11 +10,19 @@ list_functions(text)
 \item{text}{String}
 }
 \value{
-commented list of functions
+commented list of function names
 }
 \description{
 Any functions appearing in the input text
-are identified and their names. Names are then sorted
-alphabetically and outputted as a commented text in a
+are identified and their names. \cr
+Names are then sorted alphabetically and outputted as a commented text in a
 "function per line" fashion.
+}
+\examples{
+cat(
+  list_functions(
+    'hi <- function() { "hi world" }
+    hello <- function() { "hello world" }
+    howdy <- function() { "howdy workld" }'))
+
 }
