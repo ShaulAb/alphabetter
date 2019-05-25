@@ -3,23 +3,16 @@
 [![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
 [![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
 
-**`Alphbetter` contains utility addins to make the code neater**
+**`Alphbetter` contains utility Rstudio-addins**
+
+Package [website](https://shaulab.github.io/alphabetter/)
 
 <br>
 
 ## Sorting
 
-### `alpha_sort()`
-
-I find it very convenient to concentrate all relevant R packages at the top of my scripts, for example:
-
-``` r
-library(magrittr)
-library(dplyr)
-library(ggplot2)
-```
-
-You can alphabetize the above code by selecting relevant lines and apply `alpha_sort_addin`, the output will be:
+Alphabetize code by selecting relevant lines and apply `alpha_sort_addin`.  
+Useful for code sections with packages or constants, for example:
 
 ```r
 library(dplyr)
@@ -27,51 +20,20 @@ library(ggplot2)
 library(magrittr)
 ```
 
-The same goes for constants:
-
-```r
-FIG_WIDTH = 750L
-DATA_PATH = "./data"
-```
-
-Will become:
-
-``` r
-DATA_PATH = "./data"
-FIG_WIDTH = 750L
-```
-
-This makes things much easier to skim.
+This makes it much easier to skim.
 
 <br>
 
 
 ## Listing
 
-### `list_funs()`
-
-When developing packages, or R scripts with many functions (like `utils.R`), I find it useful to generate a list of all the functions in the script.  
-`list_funs_addin` will go over the entire script and generate a sorted list of all the function names. The list is sorted alphabetically, which makes it easy to skim.
+Generate a list of all the functions in the script.  
+`list_funs_addin` will go over the entire script and generate a sorted list of all the function names.
 
 For example:
 
 ```r
-# script with some functions..
-
-# comment about b
-b <- function() { "b" }
-
-# comment about c
-c <- function() { "c" }
-
-# comment about a
-a <- function() { "a" }
-```
-
-Applying the addin will result in:
-
-```r
-# script with some functions..
+# (3 successive lines added by list_funs_addin)
 # 1. a()
 # 2. b()
 # 3. c()
@@ -88,31 +50,14 @@ a <- function() { "a" }
 
 <br>
 
-## Code Statistics
-
-### `code_stats()`
+### Code Statistics
 
 Counting code lines, commented lines and blank lines.  
-For the following script:
+`code_stats_addin` output:
 
 ```r
-# script with some functions..
-
-# comment about b
-b <- function() { "b" }
-
-# comment about c
-c <- function() { "c" }
-
-# comment about a
-a <- function() { "a" }
-```
-
-Applying `code_stats_addin` outputs:
-
-```r
-code lines: 3
-comment lines: 4
-blank lines: 3
-code / comments ratio = 0.75 ( 3 / 4 )
+code lines: x
+comment lines: y
+blank lines: z
+code / comments ratio = d.dd ( x / y )
 ```
