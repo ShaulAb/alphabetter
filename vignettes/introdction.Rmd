@@ -1,8 +1,23 @@
-# alphabetter
+---
+title: "Introduction"
+date: "`r Sys.Date()`"
+output:
+  html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
 
-[![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
-[![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
+<br>
 
 **`Alphbetter` contains utility addins to make the code neater**
 

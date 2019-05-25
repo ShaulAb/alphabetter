@@ -8,3 +8,8 @@ Name: Funlister
 Description: Scans script for functions and returns a sorted list of their names
 Binding: list_funs_addin
 Interactive: false
+
+Name: Codestats
+Description: Print code statistics
+Binding: code_stats_addin
+Interactive: false

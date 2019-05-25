@@ -3,6 +3,8 @@
 export("%>%")
 export(alpha_sort)
 export(alpha_sort_addin)
+export(code_stats)
+export(code_stats_addin)
 export(list_funs)
 export(list_funs_addin)
 importFrom(magrittr,"%>%")
