@@ -1,5 +1,8 @@
 # alphabetter
 
+[![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
+[![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
+
 Utility functions and addins that I use in my own code.
 
 ## Sorting
@@ -63,7 +66,7 @@ c <- function() { "c" }
 a <- function() { "a" }
 ```
 
-After applying the addin will result in:
+Applying the addin will result in:
 
 ```r
 # script with some functions..
