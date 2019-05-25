@@ -1,8 +1,8 @@
 Package: alphabetter
-Title: utility addins
+Title: Utility Addins
 Version: 0.0.1
 Authors@R: person("Shaul", "Abergil", email = "shaul@datascience.co.il", role = c("aut", "cre"))
-Description: addin to sort lines.
+Description: Rstudio-addins to automate those small things only you care about.
 Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
