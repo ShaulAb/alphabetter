@@ -50,7 +50,7 @@ a <- function() { "a" }
 
 <br>
 
-### Code Statistics
+## Code Statistics
 
 Counting code lines, commented lines and blank lines.  
 `code_stats_addin` output:
