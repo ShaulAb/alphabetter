@@ -33,15 +33,15 @@ multiple_funs <-
    # that is all folks'
 
 test_that("no false alarms", {
-  expect_equal(list_functions(no_funs), "")
-  expect_equal(list_functions(bad_syntax), "")
+  expect_equal(list_funs(no_funs), "")
+  expect_equal(list_funs(bad_syntax), "")
 })
 
 test_that("single function", {
-  expect_equal(list_functions(single_fun), "# 1. my_fun()")
-  expect_equal(list_functions(duplicated_fun), "# 1. my_fun()\n# 2. my_fun()")
+  expect_equal(list_funs(single_fun), "# 1. my_fun()")
+  expect_equal(list_funs(duplicated_fun), "# 1. my_fun()\n# 2. my_fun()")
 })
 
 test_that("multiple functions", {
-  expect_equal(list_functions(multiple_funs), "# 1. a()\n# 2. b()\n# 3. c()")
+  expect_equal(list_funs(multiple_funs), "# 1. a()\n# 2. b()\n# 3. c()")
 })

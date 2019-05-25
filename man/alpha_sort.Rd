@@ -7,7 +7,7 @@
 alpha_sort(text)
 }
 \arguments{
-\item{text}{String, corresponds to user text selection}
+\item{text}{String, user text selection}
 }
 \value{
 sorted text
@@ -16,4 +16,12 @@ sorted text
 Helper function for alphabetize addin. \cr
 Given active text selection, the function parses the text and
 re-order them by the alphabet.
+}
+\examples{
+cat(
+  alpha_sort(
+    'library(tidyr)
+     library(stringr)
+     library(dplyr)'))
+
 }

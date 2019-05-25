@@ -18,10 +18,17 @@ alpha_sort_addin <- function() {
 #' Given active text selection, the function parses the text and
 #' re-order them by the alphabet.
 #'
-#' @param text String, corresponds to user text selection
+#' @param text String, user text selection
 #'
 #' @return sorted text
 #' @export
+#'
+#' @examples
+#' cat(
+#'   alpha_sort(
+#'     'library(tidyr)
+#'      library(stringr)
+#'      library(dplyr)'))
 #'
 alpha_sort <- function(text) {
 

@@ -1,4 +1,4 @@
-#' List Functions
+#' List Functions in Script
 #'
 #' @description Addin to list and sort function names alphabetically.
 #'
@@ -8,10 +8,10 @@ list_funs_addin <- function() {
 
   context <- rstudioapi::getActiveDocumentContext()
   text <- unlist(context$contents)
-  rstudioapi::insertText(list_functions(text))
+  rstudioapi::insertText(list_funs(text))
 }
 
-#' List functions in current script
+#' Create Sorted List of Function Names
 #'
 #' @description Any functions appearing in the input text
 #' are identified and their names. \cr
@@ -25,12 +25,12 @@ list_funs_addin <- function() {
 #'
 #' @examples
 #' cat(
-#'   list_functions(
+#'   list_funs(
 #'     'hi <- function() { "hi world" }
 #'     hello <- function() { "hello world" }
 #'     howdy <- function() { "howdy workld" }'))
 #'
-list_functions <- function(text) {
+list_funs <- function(text) {
 
   # build regex to match functions
   pattern <- '<- function'

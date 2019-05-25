@@ -2,7 +2,7 @@
 % Please edit documentation in R/list.R
 \name{list_funs_addin}
 \alias{list_funs_addin}
-\title{List Functions}
+\title{List Functions in Script}
 \usage{
 list_funs_addin()
 }
