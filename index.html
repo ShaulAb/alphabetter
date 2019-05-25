@@ -80,93 +80,47 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#alphabetter" class="anchor"></a>alphabetter</h1></div>
 
-<p><strong><code>Alphbetter</code> contains utility addins to make the code neater</strong></p>
+<p><strong><code>Alphbetter</code> contains utility Rstudio-addins</strong></p>
+<p>Package <a href="https://shaulab.github.io/alphabetter/">website</a></p>
 <p><br></p>
 <div id="sorting" class="section level2">
 <h2 class="hasAnchor">
 <a href="#sorting" class="anchor"></a>Sorting</h2>
-<div id="alpha_sort" class="section level3">
-<h3 class="hasAnchor">
-<a href="#alpha_sort" class="anchor"></a><code><a href="reference/alpha_sort.html">alpha_sort()</a></code>
-</h3>
-<p>I find it very convenient to concentrate all relevant R packages at the top of my scripts, for example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(magrittr)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a></code></pre></div>
-<p>You can alphabetize the above code by selecting relevant lines and apply <code>alpha_sort_addin</code>, the output will be:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(magrittr)</a></code></pre></div>
-<p>The same goes for constants:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">FIG_WIDTH =<span class="st"> </span>750L</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">DATA_PATH =<span class="st"> "./data"</span></a></code></pre></div>
-<p>Will become:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">DATA_PATH =<span class="st"> "./data"</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">FIG_WIDTH =<span class="st"> </span>750L</a></code></pre></div>
-<p>This makes things much easier to skim.</p>
+<p>Alphabetize code by selecting relevant lines and apply <code>alpha_sort_addin</code>.<br>
+Useful for code sections with packages or constants, for example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(magrittr)</a></code></pre></div>
+<p>This makes it much easier to skim.</p>
 <p><br></p>
-</div>
 </div>
 <div id="listing" class="section level2">
 <h2 class="hasAnchor">
 <a href="#listing" class="anchor"></a>Listing</h2>
-<div id="list_funs" class="section level3">
-<h3 class="hasAnchor">
-<a href="#list_funs" class="anchor"></a><code><a href="reference/list_funs.html">list_funs()</a></code>
-</h3>
-<p>When developing packages, or R scripts with many functions (like <code>utils.R</code>), I find it useful to generate a list of all the functions in the script.<br><code>list_funs_addin</code> will go over the entire script and generate a sorted list of all the function names. The list is sorted alphabetically, which makes it easy to skim.</p>
+<p>Generate a list of all the functions in the script.<br><code>list_funs_addin</code> will go over the entire script and generate a sorted list of all the function names.</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># script with some functions..</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co"># comment about b</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co"># comment about c</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co"># comment about a</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
-<p>Applying the addin will result in:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># script with some functions..</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co"># 1. a()</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co"># 2. b()</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co"># 3. c()</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co"># comment about b</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co"># comment about c</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co"># comment about a</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># (3 successive lines added by list_funs_addin)</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># 1. a()</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># 2. b()</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># 3. c()</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co"># comment about b</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co"># comment about c</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co"># comment about a</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
 <p><br></p>
-</div>
-</div>
-<div id="code-statistics" class="section level2">
-<h2 class="hasAnchor">
-<a href="#code-statistics" class="anchor"></a>Code Statistics</h2>
-<div id="code_stats" class="section level3">
+<div id="code-statistics" class="section level3">
 <h3 class="hasAnchor">
-<a href="#code_stats" class="anchor"></a><code><a href="reference/code_stats.html">code_stats()</a></code>
-</h3>
-<p>Counting code lines, commented lines and blank lines.<br>
-For the following script:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co"># script with some functions..</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co"># comment about b</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co"># comment about c</span></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co"># comment about a</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
-<p>Applying <code>code_stats_addin</code> outputs:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">code lines<span class="op">:</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">comment lines<span class="op">:</span><span class="st"> </span><span class="dv">4</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">blank lines<span class="op">:</span><span class="st"> </span><span class="dv">3</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">code <span class="op">/</span><span class="st"> </span>comments ratio =<span class="st"> </span><span class="fl">0.75</span> ( <span class="dv">3</span> <span class="op">/</span><span class="st"> </span><span class="dv">4</span> )</a></code></pre></div>
+<a href="#code-statistics" class="anchor"></a>Code Statistics</h3>
+<p>Counting code lines, commented lines and blank lines.<br><code>code_stats_addin</code> output:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">code lines<span class="op">:</span><span class="st"> </span>x</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">comment lines<span class="op">:</span><span class="st"> </span>y</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">blank lines<span class="op">:</span><span class="st"> </span>z</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">code <span class="op">/</span><span class="st"> </span>comments ratio =<span class="st"> </span><span class="kw">d.dd</span> ( x <span class="op">/</span><span class="st"> </span>y )</a></code></pre></div>
 </div>
 </div>
 </div>
