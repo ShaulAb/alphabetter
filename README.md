@@ -3,11 +3,11 @@
 [![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
 [![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
 
-**`Alphbetter` contains utility Rstudio-addins**
+<br><br>
 
-Package [website](https://shaulab.github.io/alphabetter/)
+![](man/figures/logo.png)
 
-<br>
+<br><br>
 
 ## Sorting
 

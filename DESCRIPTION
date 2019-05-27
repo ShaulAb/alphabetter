@@ -1,5 +1,5 @@
 Package: alphabetter
-Title: Utility Addins
+Title: Collection of Rstudio Addins
 Version: 0.0.1
 Authors@R: person("Shaul", "Abergil", email = "shaul@datascience.co.il", role = c("aut", "cre"))
 Description: Rstudio-addins to automate those small things only you care about.
@@ -11,8 +11,8 @@ Imports:
     stringr,
     rstudioapi,
     magrittr
-RoxygenNote: 6.0.1
-URL: https://github.com/ShaulAb/alphabetter
+RoxygenNote: 6.1.1
+URL: https://shaulab.github.io/alphabetter/, https://github.com/ShaulAb/alphabetter 
 BugReports: https://github.com/ShaulAb/alphabetter/issues
 Suggests: 
     testthat,
