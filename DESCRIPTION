@@ -1,8 +1,9 @@
 Package: alphabetter
-Title: Collection of Rstudio Addins
+Title: Collection of 'Rstudio' Addins
 Version: 0.0.1
 Authors@R: person("Shaul", "Abergil", email = "shaul@datascience.co.il", role = c("aut", "cre"))
-Description: Rstudio-addins to automate those small things only you care about.
+Description: Collection of 'Rstudio' addins:
+  Alphabetize code lines, list all functions in the script, show code statics and more.
 Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8

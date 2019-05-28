@@ -16,9 +16,8 @@ Integer, code lines count
 This function is being used internally by \code{code_stats}.
 }
 \examples{
-\dontrun{
 code_counter("# comment")
 code_counter("2 * 2")
 code_counter(c("(2 * 2)", ("2 * 2")))
-}
+
 }

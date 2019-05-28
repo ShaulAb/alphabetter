@@ -1,4 +1,3 @@
-# alphabetter
 
 [![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
 [![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
@@ -6,8 +5,9 @@
 <br><br>
 
 ![](man/figures/logo.png)
-
+  
 <br><br>
+
 
 ## Sorting
 
@@ -61,3 +61,12 @@ comment lines: y
 blank lines: z
 code / comments ratio = d.dd ( x / y )
 ```
+
+<br>
+
+## Notifications
+
+Wip
+
+<br><br>
+
