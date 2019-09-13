@@ -1,10 +1,3 @@
-text =
-'library(readr)
-
-df <- read_csv("data/data_all.csv")
-sample_df <- sample(df, 25L, replace = TRUE)
-write_csv(sample_df, "data/data_sample.csv", append = FALSE)'
-
 #' Notify On Read/Write Lines.
 #'
 #' @description Addin to notify on read/write Lines
