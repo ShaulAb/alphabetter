@@ -13,3 +13,8 @@ Name: Codestats
 Description: Print code statistics
 Binding: code_stats_addin
 Interactive: false
+
+Name: ArtifactsNote
+Description: Print lines with read/write functions
+Binding: notify_io_addin
+Interactive: false
