@@ -59,13 +59,13 @@ code_stats <- function(text) {
 #' @param text String / list of Strings
 #'
 #' @return Integer, code lines count
+#' @export
 #'
 #' @examples
-#' \dontrun{
 #' code_counter("# comment")
 #' code_counter("2 * 2")
 #' code_counter(c("(2 * 2)", ("2 * 2")))
-#' }
+#'
 code_counter <- function(text) {
 
   ver1 <- length(which(stringr::str_starts(string = text, pattern = "\\w")))

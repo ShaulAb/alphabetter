@@ -3,6 +3,7 @@
 export("%>%")
 export(alpha_sort)
 export(alpha_sort_addin)
+export(code_counter)
 export(code_stats)
 export(code_stats_addin)
 export(list_funs)

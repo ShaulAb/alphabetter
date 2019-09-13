@@ -1,9 +1,10 @@
 Package: alphabetter
-Title: sort lines addin
+Title: Collection of 'Rstudio' Addins
 Version: 0.0.1
 Authors@R: person("Shaul", "Abergil", email = "shaul@datascience.co.il", role = c("aut", "cre"))
-Description: addin to sort lines.
-Depends: R (>= 3.4.4)
+Description: Collection of 'Rstudio' addins:
+  Alphabetize code lines, list all functions in the script, show code statics and more.
+Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -13,11 +14,12 @@ Imports:
     magrittr,
     re2r
 RoxygenNote: 6.1.1
-URL: https://github.com/ShaulAb/alphabetter
+URL: https://shaulab.github.io/alphabetter/, https://github.com/ShaulAb/alphabetter 
 BugReports: https://github.com/ShaulAb/alphabetter/issues
 Suggests: 
     testthat,
     covr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    pkgdown
 VignetteBuilder: knitr
