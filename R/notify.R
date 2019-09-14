@@ -15,10 +15,15 @@ notify_io_addin <- function() {
 #'
 #' @param text String
 #'
-#' @return
+#' @return String
 #' @export
 #'
 #' @examples
+#' cat(
+#'   notify_io(
+#'     'df <- read.csv("my_data.csv")
+#'     write.csv(df, "your_data.csv")
+#'     write_variable <- "will not be mixed up with write function"'))
 notify_io <- function(text) {
 
   # object to store I/O matches

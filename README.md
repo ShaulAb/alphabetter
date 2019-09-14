@@ -2,9 +2,9 @@
 [![Travis build status](https://travis-ci.org/ShaulAb/alphabetter.svg?branch=master)](https://travis-ci.org/ShaulAb/alphabetter)
 [![Coverage status](https://codecov.io/gh/ShaulAb/alphabetter/branch/master/graph/badge.svg)](https://codecov.io/github/ShaulAb/alphabetter?branch=master)
 
-## Sorting
+## Sorting Imports
 
-Alphabetize code by selecting relevant lines and apply `alpha_sort_addin`.  
+Alphabetize code by selecting relevant lines and apply `Alphabetize`.  
 Useful for code sections with packages or constants, for example:
 
 ```r
@@ -18,18 +18,17 @@ This makes it much easier to skim.
 <br>
 
 
-## Listing
+## Listing Functions
 
 Generate a list of all the functions in the script.  
-`list_funs_addin` will go over the entire script and generate a sorted list of all the function names.
+`FunLister` will go over the entire script and generate a sorted list of all the function names.
 
 For example:
 
 ```r
-# (3 successive lines added by list_funs_addin)
-# 1. a()
-# 2. b()
-# 3. c()
+# 1. a() <--- added by FunLister
+# 2. b() <--- added by FunLister
+# 3. c() <--- added by FunLister
 
 # comment about b
 b <- function() { "b" }
@@ -46,7 +45,7 @@ a <- function() { "a" }
 ## Code Statistics
 
 Counting code lines, commented lines and blank lines.  
-`code_stats_addin` output:
+`CodeStats` output:
 
 ```r
 code lines: x
@@ -57,9 +56,23 @@ code / comments ratio = d.dd ( x / y )
 
 <br>
 
-## Notifications
+## Artifcats Notifications
 
-Wip
+Notify on all code lines containing read/write functions.
+Currently `readr`, `data.table` and `base` methods will be matched.
 
-<br><br>
+```r
+# line4:	read_csv	"raw_data.csv"   <--- added by `ArtifactsNote`
+# line8:	write_csv	"final_data.csv" <--- added by `ArtifactsNote`
 
+library(readr)
+library(dplyr)
+
+my_data <- read_csv("raw_data.csv")
+<some logic>
+my_data %>% 
+  select(x1, x2) %>% 
+  write_csv("final_data.csv")
+```
+
+<br>

@@ -9,6 +9,16 @@ notify_io(text)
 \arguments{
 \item{text}{String}
 }
+\value{
+String
+}
 \description{
 Notify on IO components in the code
+}
+\examples{
+cat(
+  notify_io(
+    'df <- read.csv("my_data.csv")
+    write.csv(df, "your_data.csv")
+    write_variable <- "will not be mixed up with write function"'))
 }

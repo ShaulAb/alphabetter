@@ -132,3 +132,43 @@ comment lines: 4
 blank lines: 3
 code / comments ratio = 0.75 ( 3 / 4 )
 ```
+
+<br>
+
+## Notifications
+
+Notify on all code lines containing read/write functions.
+Currently `readr`, `data.table` and `base` methods will be matched.
+
+This is useful to understand what artifcats the script relies on.
+
+For example, take the following script:
+
+```r
+library(readr)
+library(dplyr)
+
+my_data <- read_csv("raw_data.csv")
+<some logic>
+my_data %>% 
+  select(x1, x2) %>% 
+  write_csv("final_data.csv")
+```
+
+Applying `ArtifcatsNote` addin, you will see:
+
+```r
+# line4:	read_csv	"raw_data.csv"
+# line8:	write_csv	"final_data.csv"
+
+library(readr)
+library(dplyr)
+
+my_data <- read_csv("raw_data.csv")
+<some logic>
+my_data %>% 
+  select(x1, x2) %>% 
+  write_csv("final_data.csv")
+```
+
+<br>
