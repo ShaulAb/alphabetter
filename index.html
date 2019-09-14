@@ -88,10 +88,10 @@
   <div class="contents col-md-9">
 
 
-<div id="sorting" class="section level2">
+<div id="sorting-imports" class="section level2">
 <h2 class="hasAnchor">
-<a href="#sorting" class="anchor"></a>Sorting</h2>
-<p>Alphabetize code by selecting relevant lines and apply <code>alpha_sort_addin</code>.<br>
+<a href="#sorting-imports" class="anchor"></a>Sorting Imports</h2>
+<p>Alphabetize code by selecting relevant lines and apply <code>Alphabetize</code>.<br>
 Useful for code sections with packages or constants, for example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)</a>
@@ -99,41 +99,51 @@ Useful for code sections with packages or constants, for example:</p>
 <p>This makes it much easier to skim.</p>
 <p><br></p>
 </div>
-<div id="listing" class="section level2">
+<div id="listing-functions" class="section level2">
 <h2 class="hasAnchor">
-<a href="#listing" class="anchor"></a>Listing</h2>
-<p>Generate a list of all the functions in the script.<br><code>list_funs_addin</code> will go over the entire script and generate a sorted list of all the function names.</p>
+<a href="#listing-functions" class="anchor"></a>Listing Functions</h2>
+<p>Generate a list of all the functions in the script.<br><code>FunLister</code> will go over the entire script and generate a sorted list of all the function names.</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># (3 successive lines added by list_funs_addin)</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># 1. a()</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># 2. b()</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># 3. c()</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co"># comment about b</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co"># comment about c</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co"># comment about a</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># 1. a() &lt;--- added by FunLister</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># 2. b() &lt;--- added by FunLister</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># 3. c() &lt;--- added by FunLister</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co"># comment about b</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">b &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"b"</span> }</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co"># comment about c</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">c &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"c"</span> }</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co"># comment about a</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">a &lt;-<span class="st"> </span><span class="cf">function</span>() { <span class="st">"a"</span> }</a></code></pre></div>
 <p><br></p>
 </div>
 <div id="code-statistics" class="section level2">
 <h2 class="hasAnchor">
 <a href="#code-statistics" class="anchor"></a>Code Statistics</h2>
-<p>Counting code lines, commented lines and blank lines.<br><code>code_stats_addin</code> output:</p>
+<p>Counting code lines, commented lines and blank lines.<br><code>CodeStats</code> output:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">code lines<span class="op">:</span><span class="st"> </span>x</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">comment lines<span class="op">:</span><span class="st"> </span>y</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">blank lines<span class="op">:</span><span class="st"> </span>z</a>
 <a class="sourceLine" id="cb3-4" data-line-number="4">code <span class="op">/</span><span class="st"> </span>comments ratio =<span class="st"> </span><span class="kw">d.dd</span> ( x <span class="op">/</span><span class="st"> </span>y )</a></code></pre></div>
 <p><br></p>
 </div>
-<div id="notifications" class="section level2">
+<div id="artifcats-notifications" class="section level2">
 <h2 class="hasAnchor">
-<a href="#notifications" class="anchor"></a>Notifications</h2>
-<p>Wip</p>
-<p><br><br></p>
+<a href="#artifcats-notifications" class="anchor"></a>Artifcats Notifications</h2>
+<p>Notify on all code lines containing read/write functions. Currently <code>readr</code>, <code>data.table</code> and <code>base</code> methods will be matched.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># line4:    read_csv    "raw_data.csv"   &lt;--- added by `ArtifactsNote`</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co"># line8:    write_csv   "final_data.csv" &lt;--- added by `ArtifactsNote`</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(readr)</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">my_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">"raw_data.csv"</span>)</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="op">&lt;</span>some logic<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">my_data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="st">  </span><span class="kw">select</span>(x1, x2) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="st">  </span><span class="kw">write_csv</span>(<span class="st">"final_data.csv"</span>)</a></code></pre></div>
+<p><br></p>
 </div>
 
   </div>
