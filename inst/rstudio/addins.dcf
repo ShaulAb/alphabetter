@@ -18,3 +18,8 @@ Name: ArtifactsNote
 Description: Print lines with read/write functions
 Binding: notify_io_addin
 Interactive: false
+
+Name: LibrariesNote
+Description: Print lines with explicit/implicit libraries usage
+Binding: notify_libraries_addin
+Interactive: false
