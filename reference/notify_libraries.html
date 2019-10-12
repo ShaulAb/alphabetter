@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • alphabetter</title>
+<title>Detect and Display Libraries Used Throughout the Script. — notify_libraries • alphabetter</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,7 +42,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Detect and Display Libraries Used Throughout the Script. — notify_libraries" />
+<meta property="og:description" content="Detect and Display Libraries Used Throughout the Script." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -63,7 +64,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -122,102 +123,50 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Detect and Display Libraries Used Throughout the Script.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ShaulAb/alphabetter/blob/master/R/notify.R'><code>R/notify.R</code></a></small>
+    <div class="hidden name"><code>notify_libraries.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Detect and Display Libraries Used Throughout the Script.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>notify_libraries</span>(<span class='no'>text</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="alpha_sort.html">alpha_sort()</a></code> </p>
-        </td>
-        <td><p>Sort by Alphabet</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="alpha_sort_addin.html">alpha_sort_addin()</a></code> </p>
-        </td>
-        <td><p>Sort Selected Lines</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="code_counter.html">code_counter()</a></code> </p>
-        </td>
-        <td><p>Code Lines Counter</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="code_stats.html">code_stats()</a></code> </p>
-        </td>
-        <td><p>Code Statistics</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="code_stats_addin.html">code_stats_addin()</a></code> </p>
-        </td>
-        <td><p>Code Statistics Addin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="list_funs.html">list_funs()</a></code> </p>
-        </td>
-        <td><p>Create Sorted List of Function Names</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="list_funs_addin.html">list_funs_addin()</a></code> </p>
-        </td>
-        <td><p>List Functions in Script</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="notify_io.html">notify_io()</a></code> </p>
-        </td>
-        <td><p>Notify on IO components in the code</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="notify_io_addin.html">notify_io_addin()</a></code> </p>
-        </td>
-        <td><p>Notify On Read/Write Lines.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="notify_libraries.html">notify_libraries()</a></code> </p>
-        </td>
-        <td><p>Detect and Display Libraries Used Throughout the Script.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="notify_libraries_addin.html">notify_libraries_addin()</a></code> </p>
-        </td>
-        <td><p>Notify On Used/Loaded Libraries.</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>text</th>
+      <td><p>String</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>String</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(
+  <span class='fu'>notify_libraries</span>(
+    <span class='st'>'require(dplyr)
+    library(magrittr)
+    stringr::str_replace("1", "ONE")'</span>))</div><div class='output co'>#&gt; # line 1: dplyr
+#&gt; # line 2: magrittr
+#&gt; # line 3: stringr</div><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
